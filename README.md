@@ -13,7 +13,6 @@ Simple! Just install Library, include it and use!
 ```Arduino
 
 #include<BanglaDuino.h>
-BanglaDuino banglaDuino;
 void setup()
 {
     Serial.begin(9600);
@@ -21,7 +20,7 @@ void setup()
 
 void loop()
 {
-    banglaDuino.printBanglaln("আমি আরডুইনোর এটিমেগা ৩২৮পি বলছি।");
+    printBanglaln("আমি আরডুইনোর এটিমেগা ৩২৮পি বলছি।");
     delay(500);
 }
 
