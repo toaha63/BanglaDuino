@@ -35,6 +35,8 @@ void loop()
 2)void printBanglaln(const char* banglaString);
  Same as printBangla(), but it adds a newline automatic.
 
+3)int lengthOfBanglaString(const char* yourBanglaString);
+  It takes a Bangla Unicode string or any Unicode string (Not emoji) and return the length of string as int.
 
 
 
