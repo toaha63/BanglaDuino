@@ -83,8 +83,8 @@ const BanglaCharacter banglaCharacters[] PROGMEM =
     /* ৭ */ {"\xE0\xA7\x97"},
     /* ৮ */ {"\xE0\xA7\x98"},
     /* ৯ */ {"\xE0\xA7\x99"},
-               {"\xE0\xA7\xA8"}, // দাড়ি
-        /* ড় */ {"\xE0\xA6\x9C\xE0\xA7\x9C"},
+    /* দাড়ি*/  {"\xE0\xA7\xA8"},
+     /* ড় */ {"\xE0\xA6\x9C\xE0\xA7\x9C"},
     /* ঢ */ {"\xE0\xA6\x9C\xE0\xA7\x9D"},
     /* য় */ {"\xE0\xA6\xAF\xE0\xA7\x8D"},
     /* ্ */ {"\xE0\xA6\x8D"},
@@ -95,7 +95,7 @@ const BanglaCharacter banglaCharacters[] PROGMEM =
 };
 void printBangla(const char* banglaString)
 {
-    if (banglaString == NULL)
+    if(banglaString == NULL)
     {
         return;
     }
@@ -103,8 +103,14 @@ void printBangla(const char* banglaString)
     size_t length = strlen(banglaString);
     Serial.write((const uint8_t*)banglaString, length);
 }
+
 void printBanglaln(const char* banglaString)
 {
     printBangla(banglaString);
     Serial.println();
+}
+
+int lengthOfBanglaString(const char* yourBanglaString)
+{
+      return (strlen(yourBanglaString)/3);
 }
