@@ -16,4 +16,6 @@ void printBangla(const char* banglaString);
 
 void printBanglaln(const char* banglaString);
 
+int lengthOfBanglaString(const char* yourBanglaString);
+
 #endif // BANGLADUINO_H
