@@ -80,3 +80,12 @@ It has some limitations,it can't print a lerge string of Bangla (if your arduino
 
 ![Image of a output by BanglaDuino](https://github.com/toaha63/BanglaDuino/blob/master/Screenshot.png?raw=true)
 # BanglaDuino
+
+
+
+
+
+### **License**
+This library under ![MIT LICENSE](https://github.com/toaha63/BanglaDuino/blob/master/LICENSE)
+
+
