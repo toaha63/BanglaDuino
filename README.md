@@ -28,23 +28,50 @@ void loop()
 
 
 ### **Library functions**
+
+1)
 ```Arduino
  void printBangla(const char* banglaString);
  //  It print Bangla string which is passed by you and return a void.
+```
 
+2)
+```Arduino
 void printBanglaln(const char* banglaString);
 // Same as printBangla(), but it adds a newline automatic.
+```
 
+3)
+```Arduino
 int lengthOfBanglaString(const char* yourBanglaString);
  // It takes a Bangla Unicode string or any Unicode string (Not emoji) and return the length of string as int.
+```
 
+4)
+```Arduino
 String textToMorse(String input);
 //It takes a String and convert it to morse code and return it as string
 
 ```
 
+5)
+```Arduino
+String morseToText(String morseCode)
+//It takes a String of morse code and decode it into normal English and return the sentence or character as a string
 
+```
 
+6)
+```Arduino
+String base64_encode(const String &input);
+ //It takes a normal string and convert it into base64, then return encoded data as string
+ ```
+ 
+ 7)
+ ```Arduino
+String base64_decode(const String &input);
+//It takes a encoded base64 string and decode it,after decode, return the Normal text as string
+```
 
 
 ✋Limitations:
