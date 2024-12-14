@@ -64,13 +64,13 @@ String morseToText(String morseCode)
 6)
 ```Arduino
 String base64_encode(const String &input);
- //It takes a normal string and convert it into base64, then return encoded data as string
+ //It takes a normal string and convert it into base64, then return encoded data as string.It can encode Bangla strings
  ```
  
  7)
  ```Arduino
 String base64_decode(const String &input);
-//It takes a encoded base64 string and decode it,after decode, return the Normal text as string
+//It takes a encoded base64 string and decode it,after decode, return the Normal text as string.It can decode Bangla string.
 ```
 
 
