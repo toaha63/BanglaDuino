@@ -28,14 +28,22 @@ void loop()
 
 
 ### **Library functions**
- 1)void printBangla(const char* banglaString);
-   It print Bangla string which is passed by you and return a void.
+```Arduino
+ void printBangla(const char* banglaString);
+ //  It print Bangla string which is passed by you and return a void.
 
-2)void printBanglaln(const char* banglaString);
- Same as printBangla(), but it adds a newline automatic.
+void printBanglaln(const char* banglaString);
+// Same as printBangla(), but it adds a newline automatic.
 
-3)int lengthOfBanglaString(const char* yourBanglaString);
-  It takes a Bangla Unicode string or any Unicode string (Not emoji) and return the length of string as int.
+int lengthOfBanglaString(const char* yourBanglaString);
+ // It takes a Bangla Unicode string or any Unicode string (Not emoji) and return the length of string as int.
+
+String textToMorse(String input);
+//It takes a String and convert it to morse code and return it as string
+
+```
+
+
 
 
 
