@@ -72,6 +72,17 @@ String base64_encode(const String &input);
 String base64_decode(const String &input);
 //It takes a encoded base64 string and decode it,after decode, return the Normal text as string.It can decode Bangla string.
 ```
+8)
+```Arduino
+String textToBin(const String);
+//It takes s string of text and convert it to binary,then it returns the binary as a string.
+```
+9) 
+```Arduino
+String binToText(const String);
+//It takes a binary value as string and decode it to normal string. It supports Unicode. It returns text after successfully decode.
+```
+
 
 
 ✋Limitations:
