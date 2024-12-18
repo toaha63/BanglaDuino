@@ -475,4 +475,49 @@ String base64_decode(const String &input)
     return decoded;
 }
 
+String textToBin(const String str)
+{
+	if (str.length() == 0)
+	{
+		return String();
+	}
+	String binaryString = "";
+	for (unsigned int i = 0; i < str.length(); i++)
+	{
+		char c = str.charAt(i);
+		for (int j = 7; j >= 0; j--)
+		{
+			binaryString += ((c >> j) & 1) ? '1' : '0';
+		}
+	}
+	return binaryString;
+}
+
+String binToText(const String binaryString)
+{
+	String decodedString = "";
+
+	if((binaryString.length() % 8) != 0)
+	{
+		return String();
+	}
+	for (unsigned int i = 0; i < binaryString.length(); i += 8)
+	{
+		String byteString = binaryString.substring(i, i + 8);
+		char c = 0;
+
+		for(int j = 0; j < 8; j++)
+		{
+			c <<= 1;
+			if (byteString.charAt(j) == '1')
+			{
+				c |= 1;
+			}
+		}
+
+		decodedString += c;
+	}
+
+	return decodedString;
+}
 
