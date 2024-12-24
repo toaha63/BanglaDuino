@@ -102,7 +102,7 @@ const char base64_chars[] PROGMEM =
     
 void printBangla(const char* banglaString)
 {
-    if (banglaString == NULL)
+    if(banglaString == NULL)
     {
         return;
     }
@@ -521,3 +521,45 @@ String binToText(const String binaryString)
 	return decodedString;
 }
 
+void printAllUnicodeChars(int interval) 
+{
+    for (uint32_t codePoint = 0; codePoint <= 0xFFFF; codePoint++) 
+    {
+        char utf8[5];
+        int length = 0;
+
+        if (codePoint <= 0x7F) 
+        {
+            utf8[0] = (char)codePoint;
+            length = 1;
+        } 
+        else if (codePoint <= 0x7FF) 
+        {
+            utf8[0] = 0xC0 | (codePoint >> 6);
+            utf8[1] = 0x80 | (codePoint & 0x3F);
+            length = 2;
+        } 
+        else if (codePoint <= 0xFFFF) 
+        {
+            utf8[0] = 0xE0 | (codePoint >> 12);
+            utf8[1] = 0x80 | ((codePoint >> 6) & 0x3F);
+            utf8[2] = 0x80 | (codePoint & 0x3F);
+            length = 3;
+        } 
+        else if (codePoint <= 0x10FFFF) 
+        {
+            utf8[0] = 0xF0 | (codePoint >> 18);
+            utf8[1] = 0x80 | ((codePoint >> 12) & 0x3F);
+            utf8[2] = 0x80 | ((codePoint >> 6) & 0x3F);
+            utf8[3] = 0x80 | (codePoint & 0x3F);
+            length = 4;
+        }
+
+        if (length > 0) 
+        {
+            utf8[length] = '\0';
+            printBanglaln(utf8);
+            delay(interval);
+        }
+    }
+}
