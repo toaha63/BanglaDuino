@@ -29,6 +29,8 @@ String __attribute__((weak)) base64_decode(const String &input);
 String __attribute__((weak)) textToBin(const String);
 String __attribute__((weak)) binToText(const String);
 
+void __attribute__((weak)) printAllUnicodeChars(int);
+
 #ifdef __cplusplus
 }
 #endif
