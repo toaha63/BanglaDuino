@@ -82,7 +82,13 @@ String textToBin(const String);
 String binToText(const String);
 //It takes a binary value as string and decode it to normal string. It supports Unicode. It returns text after successfully decode.
 ```
+10)
+```
+void printAllUnicodeChars(int);
 
+/*It takes a int as millisecond,it means it print all unicode chars but passed delay.
+Example: printAllUnicodeChars(100); here, it print each Unicode characters after 100ms gap.*/
+```
 
 
 ✋Limitations:
