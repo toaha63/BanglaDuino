@@ -1,4 +1,4 @@
-## **BanglaDuino V1.0.2* for Arduino
+## **BanglaDuino V1.0.3 for Arduino
 
 **Written by:** Hasin Israk Toaha (SSC 25) 
 
