@@ -3,6 +3,7 @@
 **Written by:** Hasin Israk Toaha (SSC 25) 
 
 ### **What is the BanglaDuino library.?**
+How to write Unicode characters in arduino?
 
 By default, Arduino support only ASCII codes using Serial.print(). But by this library,you can print Bangla in Serial Monitor.
 
